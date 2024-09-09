@@ -1,67 +1,76 @@
 # Montenegrin AI Chef
 
-Our AI Chef has knowledge of some Montenegrin recipes, all of which you can find in the [recipes.txt](./recipes.txt) file.
+Our AI Chef is an interactive command-line application that uses a local AI model to provide knowledge of Montenegrin recipes and culinary advice.
 
-It supports all three functionalities in a single file.
+## Features
 
-As specified in the document, it can:
-1) Give user a list of recipe names that the user can make with the ingredients they provided
-2) List out the steps for making the recipe, if the user asks about the specific recipe that's the AI knows.
-3) Give back constructive feedback if the users asks about a recipe they thought of making.
+The AI Chef supports three main functionalities:
 
-If asked to do anything else, the AI will answer by instead listing all the "commands" it can do.
+1. Ingredient-based recipe suggestions: Give a list of recipe names that can be made with provided ingredients.
+2. Detailed recipe instructions: List out the steps for making a specific recipe known to the AI.
+3. Recipe critique and improvement: Provide constructive feedback on recipes suggested by users.
 
-You can find the report here: [The report](./report.md)
+If asked to do anything else, the AI will list all the "commands" it can perform.
 
-# Setup
+All known recipes can be found in the [recipes.txt](./recipes.txt) file.
 
-1) Clone the repository
-```sh
-git clone https://github.com/lodygens/bootcamp-ia.git
-```
+For more details, see [The report](./report.md).
 
-2) Go into the folder containing the repository, and into this homework folder
-```sh
-cd "bootcamp-ia/week1/Montenegrin-AI-Chef"
-```
+## Prerequisites
 
-3) Set up the virtual environment
-```sh
-python3 -m venv .venv
-```
+- Python 3.x
+- Local text generation API (text-generation-webui)
 
-4) Activate the virtual environment
+## Setup
 
-4.1) On Windows with CMD:
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/Perpernet/Montenegrin-AI-Chef-Local-API-.git
+   cd Montenegrin-AI-Chef-Local-API-
+   ```
 
-4.1.1) With CMD
-```batch
-.venv\Scripts\activate.bat
-```
-4.1.2) With PowerShell:
-```ps
-.venv\Scripts\Activate.ps1
-```
+2. Set up and activate the virtual environment:
+   ```sh
+   python3 -m venv .venv
+   ```
 
-4.2) On Linux/MacOS
-```bash
-chmod +x .venv/bin/activate
-source .venv/bin/activate
-```
+   - On Windows with CMD:
+     ```batch
+     .venv\Scripts\activate.bat
+     ```
+   - On Windows with PowerShell:
+     ```ps
+     .venv\Scripts\Activate.ps1
+     ```
+   - On Linux/MacOS:
+     ```bash
+     source .venv/bin/activate
+     ```
 
-More info on activating virtual environments: [Venv docs](https://docs.python.org/3/library/venv.html#how-venvs-work)
+3. Install required packages:
+   ```sh
+   pip install -r requirements.txt
+   ```
 
-4) Install all the required libraries
-```sh
-pip install -r requirements.txt
-```
+## Usage
 
-5) Create a .env file and replace "YOUR-OPENAI-KEY" with your OpenAI Key
-```sh
-cp .env.example .env
-```
+1. Ensure your local text generation API (text-generation-webui) is running and properly configured.
 
-6) Use the AI Chef
-```sh
-python3 main.py
-```
+2. Run the main script:
+   ```sh
+   python main.py
+   ```
+
+3. Follow the prompts to interact with the AI Chef.
+
+## API Integration
+
+This project uses a separate local text generation API. For more information, see [text-generation-webui-api](https://github.com/Perpernet/text-generation-webui-api).
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+[Specify your license here]
